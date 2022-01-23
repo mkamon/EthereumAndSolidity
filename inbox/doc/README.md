@@ -97,3 +97,12 @@ Now we improved the code in the following way:
 * the callable that uses `await` need to be defined as `asynch`
 * we can manipulate `accounts` dependently on a context
 
+## Problems solved
+
+1) `Error: error:0308010C:digital envelope routines::unsupported`
+
+   This problem in general seems to be caused by newer version of Node.js (seemingly v17+) that is using out-of-date version of openssl. There are two solutions to it (couldn't find anything about upgrading openssl):
+
+   * downgrade Node.js to v16 - `nvm install 16.13.0` (put your required version here)
+   * set variable `export NODE_OPTIONS=--openssl-legacy-provider`
+

@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "start": "react-scripts --openssl-legacy-provider start"
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
